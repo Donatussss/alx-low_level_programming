@@ -17,11 +17,12 @@ int main(void)
 		i++;
 	}
 
-	i = 65
+	i = 65;
 	
 	while (i < 70)
 	{
 		putchar(i);
+		i++;
 	}
 
 	putchar('\n');
