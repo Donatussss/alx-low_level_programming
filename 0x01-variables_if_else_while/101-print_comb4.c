@@ -11,7 +11,7 @@ int main(void)
 {
 	int i = 48;
 	int j = 48;
-	int k = 48
+	int k = 48;
 
 	while (i < 56)
 	{
@@ -32,7 +32,7 @@ int main(void)
 						putchar(' ');
 					}
 				}
-				k++
+				k++;
 			}
 			j++;
 		}
