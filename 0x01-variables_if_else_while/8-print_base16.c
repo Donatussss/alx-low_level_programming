@@ -17,10 +17,10 @@ int main(void)
 		i++;
 	}
 
-	i = 65;
+	i = 97;
 	
-	while (i < 70)
-	{
+	while (i < 103)
+	{ 
 		putchar(i);
 		i++;
 	}
