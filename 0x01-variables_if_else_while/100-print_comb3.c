@@ -17,16 +17,16 @@ int main(void)
 		j = 48;
 		while (j < 58)
 		{
-			if (i < j )
+			if (i < j)
 			{
 				putchar(i);
 				putchar(j);
-			}
 
-			if ((i + j) !=  113)
-			{
-				putchar(',');
-				putchar(' ');
+				if ((i + j) !=  113)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 			j++;
 		}
