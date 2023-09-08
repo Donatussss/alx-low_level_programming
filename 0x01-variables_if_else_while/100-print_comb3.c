@@ -10,27 +10,24 @@
 int main(void)
 {
 	int i = 48;
-	int j = 0;
-	int modval = 48;
+	int j = 48;
 
-	while (i < 58)
+	while (i < 57)
 	{
-		j = 0;
-
-		while (j < 2)
+		j = 48;
+		while (j < 58)
 		{
-			if ((i + j) > 57)
+			if (i < j )
 			{
-				modval = 58;
+				putchar(i);
+				putchar(j);
 			}
-			else
+
+			if ((i + j) !=  113)
 			{
-				modval = 48;
+				putchar(',');
+				putchar(' ');
 			}
-			putchar(i);
-			putchar(48 + ((i + j) % modval));
-			putchar(',');
-			putchar(' ');
 			j++;
 		}
 
