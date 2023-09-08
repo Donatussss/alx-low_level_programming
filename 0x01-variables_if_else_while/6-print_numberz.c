@@ -9,9 +9,9 @@
 */
 int main(void)
 {
-	char i = '0';
+	int i = 48;
 
-	while (i < ':')
+	while (i < 58)
 	{
 		putchar(i);
 		i++;
