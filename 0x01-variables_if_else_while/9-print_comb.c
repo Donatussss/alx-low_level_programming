@@ -16,11 +16,12 @@ int main(void)
 	{
 		j = i;
 
-		while (j < 10)
+		while (j < i + 10)
 		{
 			putchar(48 + ((i + j) % 58));
 			putchar(',');
 			putchar(' ');
+			j++;
 		}
 
 		i++;
