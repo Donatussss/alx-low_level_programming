@@ -11,6 +11,7 @@ int main(void)
 {
 	int i = 48;
 	int j = 0;
+	int modval = 48;
 
 	while (i < 58)
 	{
@@ -18,7 +19,15 @@ int main(void)
 
 		while (j < 10)
 		{
-			putchar(48 + ((i + j) % 58));
+			if ((i + j) > 57)
+			{
+				modval = 58;
+			}
+			else
+			{
+				modval = 48;
+			}
+			putchar(48 + ((i + j) % modval));
 			putchar(',');
 			putchar(' ');
 			j++;
