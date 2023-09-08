@@ -14,9 +14,9 @@ int main(void)
 
 	while (i < 58)
 	{
-		j = i;
+		j = 0;
 
-		while (j < i + 10)
+		while (j < 10)
 		{
 			putchar(48 + ((i + j) % 58));
 			putchar(',');
