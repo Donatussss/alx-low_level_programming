@@ -10,7 +10,7 @@ int main(void)
 	int digit1, digit2;
 	int count2;
 	int digit3, digit4;
-	while (num1 <= 98)
+	while (count1 <= 98)
 	{
 		digit1  = (count1 / 10 + 48);
 		digit2 = (count1 % 10 + 48);
@@ -26,7 +26,7 @@ int main(void)
 				putchar(' ');
 				putchar(digit3);
 				putchar(digit4);
-				if (num1 != 98)
+				if (count1 != 98)
 				{
 					putchar(',');
 					putchar(' ');
