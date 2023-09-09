@@ -10,6 +10,7 @@ int main(void)
 	int digit1, digit2;
 	int count2;
 	int digit3, digit4;
+
 	while (count1 <= 98)
 	{
 		digit1  = (count1 / 10 + 48);
