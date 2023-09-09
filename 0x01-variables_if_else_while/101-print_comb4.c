@@ -19,14 +19,15 @@ int main(void)
 		while (j < 57)
 		{
 			k = 48;
-			while (k < 58){
+			while (k < 58)
+			{
 				if (i < j && j < k)
 				{
 					putchar(i);
 					putchar(j);
 					putchar(k);
 
-					if ((i + j + k) !=  167)
+					if (i != 7 && j != 8 && k != 9)
 					{
 						putchar(',');
 						putchar(' ');
