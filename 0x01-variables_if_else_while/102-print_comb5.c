@@ -22,7 +22,7 @@ int main(void)
 			if (count1 < count2)
 			{
 				putchar(digit1);
-				putchar(digigit2);
+				putchar(digit2);
 				putchar(' ');
 				putchar(digit3);
 				putchar(digit4);
