@@ -27,8 +27,12 @@ int main(void)
 					putchar(j);
 					putchar(k);
 
-					if (i != 55 && j != 56 && k != 57)
+					if ((i + j + k != 167))
 					{
+						if (i == 55 && j == 56 && k == 57)
+						{
+							break;
+						}
 						putchar(',');
 						putchar(' ');
 					}
