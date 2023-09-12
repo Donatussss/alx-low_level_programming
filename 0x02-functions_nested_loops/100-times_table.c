@@ -16,7 +16,15 @@ void print_first_digit(int x)
 		diffx -= 10;
 	}
 
-	_putchar(x1 + '0');
+	if (x1 < 10)
+	{
+		_putchar(x1 + '0');
+	}
+	else if (x >= 10)
+	{
+		print_first_digit(x1);
+		_putchar((x1 % 10) + '0');
+	}
 }
 
 /**
@@ -30,7 +38,7 @@ void print_times_table(int n)
 	int i = 0;
 	int j = 0;
 	int r = 0;
-	int n1 =  n <= 12? n : 0;
+	int n1 =  n <= 15 ? n : -1;
 
 	while (i <= n1)
 	{
@@ -46,13 +54,19 @@ void print_times_table(int n)
 				_putchar(' ');
 			}
 
-			else if (r >= 10)
+			else if (r >= 10 && r < 100)
 			{
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
 				print_first_digit(r);
 			}
+
+			else if (r >= 100)
+			{
+				_putchar(',');
+				_putchar(' ');
+				print_first_digit(r);
 
 			_putchar((r % 10) + '0');
 			j++;
