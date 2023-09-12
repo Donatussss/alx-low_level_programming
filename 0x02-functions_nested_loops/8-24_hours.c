@@ -2,7 +2,7 @@
 /**
  * jack_bauer - entry point
  * Description - prints every minute of the day
- * print_first_digit - used in jack_bauer
+ * @print_first_digit - used in jack_bauer
  * Description - prints first digit of number with 2 or more digits
  * @x: int with 2 or more digits
  * Return: no return data
