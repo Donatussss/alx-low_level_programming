@@ -3,8 +3,7 @@
 /**
  * main - entry point
  * Description - prints _putchar with newline
- * Return - 0 on good execution
- * 
+ * Return - 0 on good execution 
 */
 
 int main(void)
