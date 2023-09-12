@@ -5,14 +5,14 @@
  * Return: no return data
  */
 
-int jack_bauer(void)
+void jack_bauer(void)
 {
 	int n = 0;
 	int x = 0;
 
 	while (n < 24)
 	{
-		x = 0
+		x = 0;
 		while (x < 60)
 		{
 			if (n < 10)
