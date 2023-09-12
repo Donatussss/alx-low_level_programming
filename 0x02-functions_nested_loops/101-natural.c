@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 /**
- * natural - entry point
+ * natural - working func
  * Description - prints the sum of multiples of 3 or 5 below 1024
  * Return: no return data
  */
-
 void natural(void)
 {
 	int i = 0;
@@ -24,7 +23,12 @@ void natural(void)
 	printf("%d\n", sum);
 }
 
-int main()
+/**
+ * main - entry point
+ * Description - executes natural
+ * Return: no return data
+ */
+int main(void)
 {
 	natural();
 	return (0);
