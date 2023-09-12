@@ -34,7 +34,7 @@ void jack_bauer(void)
 					diffn -= 10;
 				}
 
-				_putchar(n1 + '0');				
+				_putchar(n1 + '0');
 			}
 
 			_putchar((n % 10) + '0');
@@ -58,11 +58,11 @@ void jack_bauer(void)
 				_putchar(x1 + '0');
 			}
 
-			_putchar((x & 10) + '0');
+			_putchar((x % 10) + '0');
 			_putchar('\n');
 			x++;
 		}
-		
+
 		n++;
 	}
 }
