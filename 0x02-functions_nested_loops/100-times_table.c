@@ -22,11 +22,16 @@ void print_first_digit(int x)
 /**
  * print_times_table - entry point
  * Description - prints n times table
- * @n - defines size of table
+ * @n: defines size of table
  * Return: no return data
  */
 void print_times_table(int n)
 {
+	if (n < 0 || n > 15)
+	{
+		return;
+	}
+
 	int i = 0;
 	int j = 0;
 	int r = 0;
@@ -42,11 +47,13 @@ void print_times_table(int n)
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
+				_putchar(' ');
 			}
 
 			else if (r >= 10)
 			{
 				_putchar(',');
+				_putchar(' ');
 				_putchar(' ');
 				print_first_digit(r);
 			}
