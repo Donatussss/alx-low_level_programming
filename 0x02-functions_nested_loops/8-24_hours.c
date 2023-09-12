@@ -23,10 +23,6 @@ void jack_bauer(void)
 {
 	int n = 0;
 	int x = 0;
-	int n1 = 1;
-	int x1 = 1;
-	int diffn = 0;
-	int diffx = 0;
 
 	while (n < 24)
 	{
