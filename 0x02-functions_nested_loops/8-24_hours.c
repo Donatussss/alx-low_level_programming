@@ -5,6 +5,20 @@
  * Return: no return data
  */
 
+void print_first_digit(int x)
+{
+	int x1 = 1;
+	int diffx = x - 10;
+
+	while (diffx >= 10)
+	{
+		x1++;
+		diffx -= 10;
+	}
+
+	_putchar(x1 + '0');
+}
+
 void jack_bauer(void)
 {
 	int n = 0;
@@ -26,15 +40,7 @@ void jack_bauer(void)
 
 			else if (n >= 10)
 			{
-				n1 = 1;
-				diffn = n - 10;
-				while (diffn >= 10)
-				{
-					n1++;
-					diffn -= 10;
-				}
-
-				_putchar(n1 + '0');
+				print_first_digit(n);
 			}
 
 			_putchar((n % 10) + '0');
@@ -47,15 +53,7 @@ void jack_bauer(void)
 
 			else if (x >= 10)
 			{
-				x1 = 1;
-				diffx = x - 10;
-				while (diffx >= 10)
-				{
-					x1++;
-					diffx -= 10;
-				}
-
-				_putchar(x1 + '0');
+				print_first_digit(x);
 			}
 
 			_putchar((x % 10) + '0');
