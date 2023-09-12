@@ -24,7 +24,8 @@ void print_first_digit(int x)
  * Description - prints 9 times table
  * Return: no return data
  */
-void times_table(void){
+void times_table(void)
+{
 	int i = 0;
 	int j = 0;
 	int r = 0;
