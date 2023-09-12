@@ -1,13 +1,10 @@
 #include "main.h"
 /**
- * jack_bauer - entry point
- * Description - prints every minute of the day
- * @print_first_digit - used in jack_bauer
+ * print_first_digit - used in jack_bauer
  * Description - prints first digit of number with 2 or more digits
  * @x: int with 2 or more digits
  * Return: no return data
  */
-
 void print_first_digit(int x)
 {
 	int x1 = 1;
@@ -22,6 +19,11 @@ void print_first_digit(int x)
 	_putchar(x1 + '0');
 }
 
+/*
+ * jack_bauer - entry point
+ * Description - prints every minute of the day
+ * Return: no return data
+ */
 void jack_bauer(void)
 {
 	int n = 0;
