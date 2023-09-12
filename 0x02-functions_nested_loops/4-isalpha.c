@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _islalpha - entry point
+ * _isalpha - entry point
  * Description - checks if character is alphabet both lower and uppercase
  * @c : character to check if alphabet
  * Return: 1 if c is a letter, lowercase or uppercase, 0 otherwise
