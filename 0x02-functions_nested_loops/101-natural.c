@@ -23,3 +23,9 @@ void natural(void)
 
 	printf("%d\n", sum);
 }
+
+int main()
+{
+	natural();
+	return (0);
+}
