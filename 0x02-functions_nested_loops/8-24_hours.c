@@ -19,7 +19,7 @@ void print_first_digit(int x)
 	_putchar(x1 + '0');
 }
 
-/*
+/**
  * jack_bauer - entry point
  * Description - prints every minute of the day
  * Return: no return data
