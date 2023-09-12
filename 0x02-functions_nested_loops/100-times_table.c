@@ -67,6 +67,7 @@ void print_times_table(int n)
 				_putchar(',');
 				_putchar(' ');
 				print_first_digit(r);
+			}
 
 			_putchar((r % 10) + '0');
 			j++;
