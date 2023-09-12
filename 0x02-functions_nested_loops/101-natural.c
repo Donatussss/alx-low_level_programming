@@ -21,5 +21,5 @@ void natural(void)
 		i++;
 	}
 
-	print("%d\n", sum);
+	printf("%d\n", sum);
 }
