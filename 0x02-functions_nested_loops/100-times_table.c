@@ -30,7 +30,7 @@ void print_times_table(int n)
 	int i = 0;
 	int j = 0;
 	int r = 0;
-	int n1 = n ? n <= 12 : 0;
+	int n1 =  n <= 12? n : 0;
 
 	while (i <= n1)
 	{
