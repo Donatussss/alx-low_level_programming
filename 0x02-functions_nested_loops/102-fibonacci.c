@@ -10,9 +10,8 @@ void fibonacci(void)
 	int i = 0;
 	int j = 0;
 	int sum = 1;
-	int fib[51];
-	fib[0] = 0;
-	fib[1] = 1;
+	int fib[50];
+	fib[0] = 1;
 
 	while (i <= 50)
 	{
@@ -30,7 +29,7 @@ void fibonacci(void)
 			printf("%d", sum);
 		}
 
-		if (i < 50)
+		if (i < 50 && sum > 0)
 		{
 			printf(", ");
 		}
