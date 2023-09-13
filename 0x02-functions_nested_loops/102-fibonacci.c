@@ -32,7 +32,7 @@ void fibonacci(void)
 
 		if (sum > 0)
 		{
-			printf("%d", sum);
+			printf("%ld", sum);
 		}
 
 		if (i < 50 && sum > 0)
