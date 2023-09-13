@@ -27,7 +27,7 @@ void fibonacci(void)
 
 		if (j > 1)
 		{
-			fib[i] = sum;
+			fib[i - 1] = sum;
 		}
 
 		if (sum > 0)
