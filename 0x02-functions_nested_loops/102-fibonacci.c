@@ -11,6 +11,7 @@ void fibonacci(void)
 	int j = 0;
 	int sum = 0;
 	int fib[50];
+
 	fib[0] = 1;
 	fib[1] = 2;
 
@@ -24,18 +25,14 @@ void fibonacci(void)
 			j++;
 		}
 
-		if(j > 1)
+		if (j > 1)
 		{
-			fib[i] = sum;			
-		}
-
-		if(sum > 0)
-		{
-			printf("%d", sum);
+			fib[i] = sum;
 		}
 
 		if (i < 50 && sum > 0)
 		{
+			printf("%d", sum);
 			printf(", ");
 		}
 		i++;
