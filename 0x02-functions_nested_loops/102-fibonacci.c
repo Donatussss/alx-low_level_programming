@@ -9,8 +9,8 @@ void fibonacci(void)
 {
 	int i = 0;
 	int j = 0;
-	int sum = 0;
-	int fib[50];
+	long sum = 0;
+	long fib[50];
 
 	fib[0] = 1;
 	fib[1] = 2;
