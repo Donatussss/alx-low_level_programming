@@ -14,7 +14,7 @@ void fibonacci(void)
 
 	while (i <= 98)
 	{
-		printf("%d", l);
+		printf("%ld", k + j);
 		if (i >= 2)
 		{
 			j = k;
