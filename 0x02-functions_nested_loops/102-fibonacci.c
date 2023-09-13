@@ -7,40 +7,29 @@
  */
 void fibonacci(void)
 {
-	int i = 0;
-	int j = 0;
-	long sum = 0;
-	long fib[50];
-
-	fib[0] = 1;
-	fib[1] = 1;
+	long i = 1;
+	long j = 1;
+	long k = j;
+	long l = j;
 
 	while (i <= 50)
 	{
-		j = 0;
-		sum = 0;
-		while (j < i)
+		printf("%ld", l);
+		if(i >= 2)
 		{
-			sum += fib[j];
-			j++;
+			j = k;
+			k = l;
 		}
 
-		if (j > 1)
-		{
-			fib[i - 1] = sum;
-		}
-
-		if (sum > 0)
-		{
-			printf("%ld", sum);
-		}
-
-		if (i < 50 && sum > 0)
+		l = k + j;
+		if (i < 50)
 		{
 			printf(", ");
 		}
+
 		i++;
 	}
+	printf("\n");
 
 }
 
