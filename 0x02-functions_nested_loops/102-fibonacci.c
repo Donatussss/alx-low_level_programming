@@ -13,7 +13,7 @@ void fibonacci(void)
 	long fib[50];
 
 	fib[0] = 1;
-	fib[1] = 2;
+	fib[1] = 1;
 
 	while (i <= 50)
 	{
