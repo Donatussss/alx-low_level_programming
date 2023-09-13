@@ -15,7 +15,7 @@ void fibonacci(void)
 	while (i <= 50)
 	{
 		printf("%ld", l);
-		if(i >= 2)
+		if (i >= 2)
 		{
 			j = k;
 			k = l;
