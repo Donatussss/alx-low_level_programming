@@ -30,15 +30,18 @@ void fibonacci(void)
 			fib[i] = sum;
 		}
 
-		if (i < 50 && sum > 0)
+		if (sum > 0)
 		{
 			printf("%d", sum);
+		}
+
+		if (i < 50 && sum > 0)
+		{
 			printf(", ");
 		}
 		i++;
 	}
 
-	printf("%d\n", sum);
 }
 
 /**
