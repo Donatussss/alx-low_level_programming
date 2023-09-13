@@ -9,7 +9,7 @@ void fibonacci(void)
 {
 	int i = 0;
 	int j = 0;
-	int sum = 1;
+	int sum = 0;
 	int fib[50];
 	fib[0] = 1;
 	fib[1] = 2;
@@ -24,7 +24,7 @@ void fibonacci(void)
 			j++;
 		}
 
-		if(j > 2)
+		if(j > 1)
 		{
 			fib[i] = sum;			
 		}
@@ -38,7 +38,6 @@ void fibonacci(void)
 		{
 			printf(", ");
 		}
-
 		i++;
 	}
 
