@@ -27,12 +27,12 @@ void fibonacci(void)
 		if(sum > 0)
 		{
 			fib[i] = sum;
-			print("%d", sum);
+			printf("%d", sum);
 		}
 
 		if (i < 50)
 		{
-			print(", ");
+			printf(", ");
 		}
 
 		i++;
@@ -48,6 +48,6 @@ void fibonacci(void)
  */
 int main(void)
 {
-	natural();
+	fibonacci();
 	return (0);
 }
