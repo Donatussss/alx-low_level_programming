@@ -7,7 +7,7 @@
  */
 void fibonacci_even_sum(void)
 {
-	long i = 1
+	long i = 1;
 	long j = 1;
 	long k = j;
 	long l = j;
