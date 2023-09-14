@@ -17,6 +17,5 @@ int _isupper(int c)
     {
 	    check_val = 0;
     }
-
     return (check_val);
 }
