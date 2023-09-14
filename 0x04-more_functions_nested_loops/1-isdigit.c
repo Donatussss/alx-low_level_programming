@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
  * _isdigit - entry point
  * @c: number to be checked
  * Return: 1 if c is a digit, 0 otherwise
