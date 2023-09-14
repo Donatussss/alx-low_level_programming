@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * print_numbers - entry point
+ * Description - print 0 to 9
  * Return: no return data
  */
 
