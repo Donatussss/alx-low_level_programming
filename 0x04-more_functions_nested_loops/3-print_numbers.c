@@ -11,6 +11,7 @@ void print_numbers(void)
 	while (x <= 57)
 	{
 		_putchar(x);
+		x++;
 	}
 	_putchar('\n');
 }
