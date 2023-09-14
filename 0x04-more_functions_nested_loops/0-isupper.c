@@ -11,7 +11,7 @@ int _isupper(int c)
 {
     int check_val;
 
-    if (c >= 65 && <= 90)
+    if (c >= 65 && c <= 90)
     {
 	    check_val = 1;
     }
