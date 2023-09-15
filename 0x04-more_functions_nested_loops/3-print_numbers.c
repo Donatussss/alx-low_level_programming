@@ -4,16 +4,13 @@
  * Description - print 0 to 9
  * Return: no return data
  */
-
 void print_numbers(void)
 {
-	int x = 48;
-	
-	while (x <= 57)
+	int x;
+
+	for (x = 0; x <= 9; x++)
 	{
-		_putchar(x);
-		x++;
+		_putchar(x + '0');
 	}
 	_putchar('\n');
 }
-
