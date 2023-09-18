@@ -11,7 +11,7 @@ int _atoi(char *s)
 {
 	int step = 0;
 	int sign = 1;
-	int final_num = 0;
+	unsigned int final_num = 0;
 	char curr_char = *s;
 	int num_start = 0;
 
@@ -24,7 +24,7 @@ int _atoi(char *s)
 				num_start = 1;
 			}
 
-			final_num = (final_num * 10) + (curr_char - 48);
+			final_num = (final_num * 10) + (curr_char - 48);			
 
 		}
 
