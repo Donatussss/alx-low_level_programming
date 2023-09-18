@@ -31,10 +31,11 @@ void rev_string(char *s)
 	int rise = 0;
 	int len = _strlen(s) - 1;
 	char temp = *s;
+	int offset = len % 2 == 0 ? 0 : 1;
 
-	if(len > 0)
+	if (len > 0)
 	{
-		while (len != rise)
+		while (len != rise - offset)
 		{
 			temp = *(s + len);
 			*(s + len) = *(s + rise);
