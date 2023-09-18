@@ -1,8 +1,7 @@
 #include "main.h"
 
-/*
- * swap_int - entry point
- * Description - swaps the values of two integers
+/**
+ * swap_int  - swaps the values of two integers
  * @a: first int
  * @b: second int
  * @t: temp int
