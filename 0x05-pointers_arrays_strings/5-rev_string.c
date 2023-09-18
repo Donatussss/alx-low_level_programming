@@ -21,7 +21,7 @@ int _strlen(char *s)
 }
 
 /**
- * rev-string - prints a string, in reverse
+ * rev_string - prints a string, in reverse
  * @s: address of first character
  * Return: no return data
  */
@@ -32,12 +32,15 @@ void rev_string(char *s)
 	int len = _strlen(s) - 1;
 	char temp = *s;
 
-	while (len != rise)
+	if(len > 0)
 	{
-		temp = *(s + len);
-		*(s + len) = *(s + rise);
-		*(s + rise) = temp;
-		rise++;
-		len--;
+		while (len != rise)
+		{
+			temp = *(s + len);
+			*(s + len) = *(s + rise);
+			*(s + rise) = temp;
+			rise++;
+			len--;
+		}
 	}
 }
