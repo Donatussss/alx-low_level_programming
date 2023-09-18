@@ -7,6 +7,7 @@
  * the buffer pointed to by dest.
  * @dest: destination buffer
  * @src: first address of char
+ * Return: var with dest's address
  */
 
 char *_strcpy(char *dest, char *src)
@@ -21,5 +22,5 @@ char *_strcpy(char *dest, char *src)
 
 	*(dest + step) = '\0';
 
-	return dest;
+	return (dest);
 }
