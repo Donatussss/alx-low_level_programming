@@ -36,7 +36,7 @@ void puts_half(char *str)
 
 	while (count < len)
 	{
-		if (count >= n - cond)
+		if (count >= n + cond)
 		{
 			_putchar(*(str + count));
 		}
