@@ -24,8 +24,7 @@ int _atoi(char *s)
 				num_start = 1;
 			}
 
-			final_num = (final_num * 10) + (curr_char - 48);			
-
+			final_num = (final_num * 10) + (curr_char - 48);
 		}
 
 		else if (curr_char == '-')
