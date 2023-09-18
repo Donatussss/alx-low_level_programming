@@ -8,16 +8,16 @@
 
 int _strlen(char *s)
 {
-        int str_len = 0;
-        char comp = *s;
+	int str_len = 0;
+	char comp = *s;
 
-        while (comp != '\0')
-        {
-                str_len++;
-                comp = *(s + str_len);
-        }
+	while (comp != '\0')
+	{
+		str_len++;
+		comp = *(s + str_len);
+	}
 
-        return (str_len);
+	return (str_len);
 }
 
 /**
