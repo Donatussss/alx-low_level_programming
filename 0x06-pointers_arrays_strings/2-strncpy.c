@@ -16,18 +16,17 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		if (*(src + j) == 0)
 		{
-
-			while (j < n)
-			{
-				*(dest + i) = '\0';
-				i++;
-				j++;
-			}
-
 			break;
 		}
 
 		*(dest + i) = *(src + j);
+		i++;
+		j++;
+	}
+
+	while (j < n)
+	{
+		*(dest + i) = '\0';
 		i++;
 		j++;
 	}
