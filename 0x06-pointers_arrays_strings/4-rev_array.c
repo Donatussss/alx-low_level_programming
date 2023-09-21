@@ -4,7 +4,7 @@
  * reverse_array - reverses the content of
  * an array of integers
  * @a: pointer to array
- * n: number of elements
+ * @n: number of elements
  */
 
 void reverse_array(int *a, int n)
@@ -15,11 +15,11 @@ void reverse_array(int *a, int n)
 
 	while (n != i - offset)
 	{
-		temp = *(a + i);
-		*(a + i) = *(a + n - 1);
-		*(a + n - 1) = temp;
-		i++;
 		n--;
+		temp = *(a + i);
+		*(a + i) = *(a + n);
+		*(a + n) = temp;
+		i++;
 	}
 
 }
