@@ -5,8 +5,6 @@
  * @s1: first string
  * @s2: second string
  * Return: 0 if strings are equal
- * >0 if the first non-matching character in str1 is greater (in ASCII) than that of str2
- * <0 if the first non-matching character in str1 is lower (in ASCII) than that of str2
  */
 
 int _strcmp(char *s1, char *s2)
