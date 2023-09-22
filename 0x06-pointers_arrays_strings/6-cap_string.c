@@ -51,6 +51,11 @@ char *cap_string(char *s)
 		if (check_char(ptr, *(s + i)))
 		{
 			capitalize = 1;
+			
+			if (*(s + i) == '\t')
+			{
+				*(s + i) = ' ';
+			}
 		}
 
 		else if (capitalize)
