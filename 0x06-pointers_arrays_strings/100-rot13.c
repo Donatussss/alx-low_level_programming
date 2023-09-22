@@ -13,13 +13,13 @@ char *rot13(char *s)
 	char alphbt[] = "abcdefghijklmnopqrstuvwxyxABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	while (*(string + count) != '\0')
+	while (*(s + i) != '\0')
 	{
 		for (j = 0; j < 52; j++)
 		{
-			if (*(string + count) == alphbt[j])
+			if (*(s + i) == alphbt[j])
 			{
-				(*(string + count) = rot13[j]);
+				(*(s + i) = rot13[j]);
 				break;
 			}
 		}
