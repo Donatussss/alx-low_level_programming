@@ -12,7 +12,7 @@ char *rot13(char *s)
 	int j = 0;
 	int n1 = 97;
 	int n2 = 122;
-	
+
 	while (i < 2)
 	{
 		j = 0;
