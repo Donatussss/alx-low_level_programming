@@ -17,7 +17,7 @@ char *rot13(char *s)
 	{
 		j = 0;
 
-		while(*(s + j) != '\0')
+		while (*(s + j) != '\0')
 		{
 			if (*(s + j) >= n1 && *(s + j) <= n2)
 			{
