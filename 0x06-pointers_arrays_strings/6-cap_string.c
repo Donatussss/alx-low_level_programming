@@ -41,7 +41,7 @@ int check_char(char *a, char c)
 
 char *cap_string(char *s)
 {
-	char delimiter[] = " -\t-\n-,-;-.-!-?-\"-(-)-{-}";
+	char delimiter[] = " -\t-\n-\r-,-;-.-!-?-\"-(-)-{-}";
 	char *ptr = delimiter;
 	int i = 0;
 	int capitalize = 0;
