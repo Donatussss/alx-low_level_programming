@@ -17,13 +17,16 @@ char *rot13(char *s)
 	{
 		for (j = 0; j < 52; j++)
 		{
+
 			if (*(s + i) == alphbt[j])
 			{
 				(*(s + i) = rot13[j]);
 				break;
 			}
 		}
+
 		i++;
 	}
+
 	return (s);
 }
