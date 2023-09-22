@@ -1,70 +1,29 @@
 #include "main.h"
-
 /**
- * check_char - checks character
- * @a: pointer to dash separated string
- * @c: character itself
- * Return: 1 if found, 0 if not found
- */
-
-int check_char(char *a, char c)
+* cap_string - capitalizes all words of a string
+* @string: string
+* Return: pointer to char
+*/
+char *cap_string(char *string)
 {
-	int i = 0;
-	int found = 0;
+	int count = 0, num;
+	int sep_words[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	while (*(a + i) != '\0')
+	if ((*(string + count) >= 97) && (*(string + count) <= 122))
+		*(string + count) = *(string + count) - 32;
+	count++;
+	while (*(string + count) != '\0')
 	{
-		if (*(a + i) == 45)
+		for (num = 0; num < 13; num++)
 		{
-			i++;
-			continue;
-		}
-
-		else if (*(a + i) == c)
-		{
-			found = 1;
-			break;
-		}
-
-		i++;
-
-	}
-
-	return (found);
-}
-
-/**
- * cap_string -  capitalizes all words of a string
- * @s: pointer to string
- * Return: pointer to string
- */
-
-char *cap_string(char *s)
-{
-	char delimiter[] = " -\t-\n-\r-,-;-.-!-?-\"-(-)-{-}";
-	char *ptr = delimiter;
-	int i = 0;
-	int capitalize = 0;
-
-	while (*(s + i) != '\0')
-	{
-		if (check_char(ptr, *(s + i)))
-		{
-			capitalize = 1;
-		}
-
-		else if (capitalize)
-		{
-			if (*(s + i) >= 97 && *(s + i) <= 122)
+			if (*(string + count) == sep_words[num])
 			{
-				*(s + i) = *(s + i) - 32;
+				if ((*(string + count + 1) >= 97) && (*(string + count + 1) <= 122))
+					*(string + (count + 1)) = *(string + (count + 1)) - 32;
+				break;
 			}
-
-			capitalize = 0;
 		}
-
-		i++;
+		count++;
 	}
-
-	return (s);
+	return (string);
 }
