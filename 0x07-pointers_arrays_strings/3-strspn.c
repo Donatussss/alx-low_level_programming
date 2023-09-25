@@ -37,35 +37,30 @@ char *_strchr(char *s, char c)
 
 
 /**
- * _strspn - a function that gets the length
- * of a prefix substring
- * @s: pointer to string to check for accept
- * @accept: pointer to string being checked
- * in s
- * Return:  the number of bytes in the initial
- * segment of s which consist only of bytes from
+ * _strspn - a function that gets the length of
+ * a prefix substring. i.e how far in s do we have
+ * to go before finding a character that is not in
  * accept
+ * @s: string to check
+ * @accept: string with prefix characters
+ * Return: number of bytes in the initial segment
+ * of s which consist only of bytes from accept
  */
 
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i = 0;
-	unsigned int j = 0;
 
-	while (*(accept + j) != '\0')
+	while (*(s + i) != '\0')
 	{
-		if (_strchr(s, *(accept + j)) != NULL)
+		if (_strchr(accept, *(s + i)) == NULL)
 		{
-			i++;
+			break;
 		}
 
-		j++;
-	}
-
-	if (_strchr(s, *(accept + j)) != NULL)
-	{
 		i++;
 	}
 
 	return (i);
 }
+
