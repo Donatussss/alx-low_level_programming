@@ -15,29 +15,38 @@ char *_strstr(char *haystack, char *needle)
 	int j = 0;
 	int found = 0;
 	char *f = NULL;
+	char *temp = NULL;
 
 	while (*(haystack + i) != '\0')
 	{
 		if (found && *(needle + j) == '\0')
+		{
+			f = temp;
 			break;
+		}
 
 		if (*(haystack + i) == *(needle + j) && !found)
 		{
 			found = 1;
-			f = haystack + i;
+			temp = haystack + i;
 		}
 
 		else if (*(haystack + i) != *(needle + j) && found)
 		{
 			found = 0;
 			j = 0;
-			f = NULL;
+			temp = NULL;
 		}
 
 		if (found)
 			j++;
 
 		i++;
+	}
+
+	if (found && *(needle + j) == '\0')
+	{
+		f = temp;
 	}
 
 	return (f);
