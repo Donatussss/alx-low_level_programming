@@ -27,5 +27,10 @@ char *_strchr(char *s, char c)
 		i++;
 	}
 
+	if (*(s + i) == c)
+	{
+		location = s + i;
+	}
+
 	return (location);
 }
