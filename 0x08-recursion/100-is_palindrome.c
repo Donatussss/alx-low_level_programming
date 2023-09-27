@@ -22,6 +22,7 @@ int _strlen_recursion(char *s)
  * @s: pointer to point in string
  * @p: start point
  * @n: string length
+ * Return: 1 if s is palindrome, otherwise 0
  */
 
 int is_palindrome_temp(char *s, int p, int n)
