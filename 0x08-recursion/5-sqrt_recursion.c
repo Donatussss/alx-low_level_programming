@@ -10,12 +10,12 @@
 
 int _sqrt_temp(int n, int p)
 {
-	if (p *p > n)
+	if ((p * p) > n)
 	{
 		return (-1);
 	}
 
-	else if (p *p == n)
+	else if ((p * p) == n)
 	{
 		return (p);
 	}
