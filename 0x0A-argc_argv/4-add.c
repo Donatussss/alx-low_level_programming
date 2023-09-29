@@ -20,6 +20,11 @@ int str_to_int(char *s)
 
 	while (*(s + i) != '\0')
 	{
+		if (!(*(s + i) >= 48 && *(s + i) <= 57))
+		{
+			return (-1);
+		}
+
 		num = num * 10 + (*(s + i) - '0');
 		i++;
 	}
