@@ -27,5 +27,5 @@ char *create_array(unsigned int size, char c)
 		*(temp + i++) = c;
 	}
 
-	return (char_arr);
+	return (temp);
 }
