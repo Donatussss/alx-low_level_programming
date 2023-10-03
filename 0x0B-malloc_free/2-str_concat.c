@@ -1,38 +1,74 @@
-#include <stdlib.h>
 #include "main.h"
+#include <stdlib.h>
+
 /**
-* str_concat - concatenates two strings
-* @s1: string 1
-* @s2: string 2
-* Return: NULL or concatenated string
-*/
+ * _strlen - returns length of string
+ * @s: pointer to first char in string
+ * Return: int length of string
+ */
+
+int _strlen(char *s)
+{
+	unsigned int str_len = 0;
+	char comp = *s;
+
+	while (comp != '\0')
+	{
+		str_len++;
+		comp = *(s + str_len);
+	}
+
+	return (str_len);
+}
+
+/**
+ * str_concat - a function that concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: pointer should point to a newly allocated space in memory
+ * which contains the contents of s1, followed by the contents of s2
+ * and null terminated
+ * if NULL is passed, treat it as an empty string
+ * Return NULL on failure
+ */
+
 char *str_concat(char *s1, char *s2)
 {
-	char *word;
-	unsigned int num1, num2, num3, max;
+	unsigned int i = 0, j = 0;
+	unsigned int str_len1 = 0, str_len2 = 0;
+	char *new_str;
 
-	if (s1 == NULL)
-		s1 = "";/* null string*/
-	if (s2 == NULL)
-		s2 = "";
+	if (s1 != NULL)
+		str_len1 = _strlen(s1);
 
-	for (num1 = 0; s1[num1] != '\0'; num1++)
-	;
-	for (num2 = 0; s2[num2] != '\0'; num2++)
-	;
+	if (s2 != NULL)
+		str_len2 = _strlen(s2);
 
-	word = malloc(sizeof(char) * (num1 + num2 + 1));
+	new_str = malloc(sizeof(char) * (str_len1 + str_len2 + 1));
 
-	if (word == NULL)
+	if (new_str == NULL)
 	{
-		free(word);
+		free(new_str);
 		return (NULL);
 	}
-	for (num3 = 0; num3 < num1; num3++)
-		word[num3] = s1[num3];
-	max = num2;
 
-	for (num2 = 0; num2 <= max; num3++, num2++)
-		word[num3] = s2[num2];
-	return (word);
+	while (i < str_len1)
+	{
+		*(new_str + i) = *(s1 + i);
+		i++;
+	}
+
+	while (j < str_len2)
+	{
+		*(new_str + i) = *(s2 + j);
+		i++;
+		j++;
+	}
+	
+	if (i == 0 && j == 0)
+		i++;
+
+	 *(new_str + i) = '\0';
+
+	return (new_str);
 }
