@@ -164,9 +164,7 @@ char **strtow(char *str)
 
 	if (arr == NULL)
 		return (NULL);
-
 	word_start_arr = malloc(sizeof(int) * (space_count + 1));
-
 	if (word_start_arr == NULL)
 		return (NULL);
 
@@ -183,7 +181,8 @@ char **strtow(char *str)
 		}
 		i++;
 	}
-
+	free(word_start_arr);
+	free(word_len_arr);
 	*(arr + i) = NULL;
 
 	return (arr);
