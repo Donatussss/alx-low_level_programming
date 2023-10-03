@@ -35,7 +35,7 @@ int **alloc_grid(int width, int height)
 		if (temp2 == NULL)
 			return (NULL);
 
-		*(arr1 + i) = temp2;
+		*(arr1 + i) = (int *)temp2;
 
 		i++;
 	}
