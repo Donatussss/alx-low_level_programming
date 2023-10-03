@@ -64,7 +64,7 @@ char *str_concat(char *s1, char *s2)
 		i++;
 		j++;
 	}
-	
+
 	if (i == 0 && j == 0)
 		i++;
 
