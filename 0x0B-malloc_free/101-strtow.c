@@ -49,30 +49,23 @@ int space_counter(char *str)
 
 char **word_split_counter(char *str, char **str_arr, int *word_len_arr)
 {
-	int i = 0, space_count = 0, space_condition = 0;
+	int i = 0, space_condition = 0;
 	int word_start = 0, word_len = 0, j = 0;
 
 	while (*(str + i) != '\0')
 	{
 		if (*(str + i) == 32 && !space_condition && word_start)
 		{
-			space_count++;
 			space_condition = 1;
 			*(str_arr + j) = malloc(sizeof(char) * word_len);
-
 			if (*(str_arr + j) == NULL)
 				return (NULL);
-
 			*(word_len_arr + j) = word_len;
 			word_len = 0;
 			j++;
 		}
-
 		else if (*(str + i) != 32 && !space_condition && word_start)
-		{
 			word_len++;
-		}
-
 		else if (*(str + i) != 32 && space_condition)
 		{
 			space_condition = 0;
@@ -87,6 +80,13 @@ char **word_split_counter(char *str, char **str_arr, int *word_len_arr)
 		i++;
 	}
 
+	if (!space_condition && word_start)
+	{
+		*(str_arr + j) = malloc(sizeof(char) * word_len);
+		if (*(str_arr + j) == NULL)
+			return (NULL);
+		*(word_len_arr + j) = word_len;
+	}
 
 	return (str_arr);
 }
@@ -150,7 +150,6 @@ char **strtow(char *str)
 	int *word_start_arr;
 
 	space_count = space_counter(str);
-
 	arr = malloc(sizeof(char *) * (space_count + 2));
 	word_len_arr = malloc(sizeof(int) * (space_count + 1));
 
