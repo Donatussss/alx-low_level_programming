@@ -9,7 +9,7 @@
 
 int _strlen(char *s)
 {
-	int str_len = 0;
+	unsigned int str_len = 0;
 	char comp = *s;
 
 	while (comp != '\0')
@@ -34,8 +34,8 @@ int _strlen(char *s)
 
 char *str_concat(char *s1, char *s2)
 {
-	int i = 0, j = 0;
-	int str_len1, str_len2 = 0;
+	unsigned int i = 0, j = 0;
+	unsigned int str_len1, str_len2 = 0;
 	void *temp;
 	char *new_str;
 
