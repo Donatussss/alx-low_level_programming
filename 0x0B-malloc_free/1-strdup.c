@@ -44,7 +44,7 @@ char *_strdup(char *str)
 	}
 
 	strlen = _strlen(str);
-	new_str = (char *)malloc(sizeof(char) * strlen + 1);
+	new_str = (char *)malloc(sizeof(char) * strlen);
 
 	while (i < strlen)
 	{
