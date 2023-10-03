@@ -41,6 +41,9 @@ char *argstostr(int ac, char **av)
 
 	while (i < ac)
 	{
+		if (*(av + i) == NULL)
+			return (NULL);
+
 		j += _strlen(*(av + i));
 		i++;
 	}
@@ -57,9 +60,6 @@ char *argstostr(int ac, char **av)
 	while (i < ac)
 	{
 		j = 0;
-
-		if (*(av + i) == NULL)
-			return (NULL);
 
 		while (j < _strlen(*(av + i)))
 		{
