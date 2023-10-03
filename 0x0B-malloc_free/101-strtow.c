@@ -35,6 +35,9 @@ int space_counter(char *str)
 	if (space_condition)
 		space_count--;
 
+	if (!word_start)
+		return (-1);
+
 	return (space_count);
 }
 
@@ -150,12 +153,13 @@ char **strtow(char *str)
 	int *word_start_arr;
 
 	space_count = space_counter(str);
+	if (space_count < 0)
+		return (NULL);
 	arr = malloc(sizeof(char *) * (space_count + 2));
 	word_len_arr = malloc(sizeof(int) * (space_count + 1));
 
 	if (arr == NULL || word_len_arr == NULL)
 		return (NULL);
-
 	arr = word_split_counter(str, arr, word_len_arr);
 
 	if (arr == NULL)
