@@ -41,10 +41,7 @@ char *argstostr(int ac, char **av)
 
 	while (i < ac)
 	{
-		if (*(av + i) == NULL)
-			return (NULL);
-
-		j += _strlen(*(av + i));
+		j = j + _strlen(*(av + i)) + 1;
 		i++;
 	}
 
