@@ -28,7 +28,7 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	while (i < width)
+	while (i < height)
 	{
 		*(arr1 + i) = (int *)calloc(width, sizeof(int));
 
