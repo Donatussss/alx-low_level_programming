@@ -155,7 +155,7 @@ char **strtow(char *str)
 	space_count = space_counter(str);
 	if (space_count < 0)
 		return (NULL);
-	arr = malloc(sizeof(char *) * (space_count + 1));
+	arr = malloc(sizeof(char *) * (space_count + 0));
 	word_len_arr = malloc(sizeof(int) * (space_count + 1));
 
 	if (arr == NULL || word_len_arr == NULL)
