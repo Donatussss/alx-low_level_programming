@@ -36,7 +36,6 @@ char *str_concat(char *s1, char *s2)
 {
 	unsigned int i = 0, j = 0;
 	unsigned int str_len1, str_len2 = 0;
-	void *temp;
 	char *new_str;
 
 	if (s1 != NULL)
@@ -45,15 +44,13 @@ char *str_concat(char *s1, char *s2)
 	if (s2 != NULL)
 		str_len2 = _strlen(s2);
 
-	temp = malloc(sizeof(char) * (str_len1 + str_len2 + 1));
+	new_str = malloc(sizeof(char) * (str_len1 + str_len2 + 1));
 
-	if (temp == NULL)
+	if (new_str == NULL)
 	{
-		free(temp);
+		free(new_str);
 		return (NULL);
 	}
-
-	new_str = (char *)temp;
 
 	while (i < str_len1)
 	{
