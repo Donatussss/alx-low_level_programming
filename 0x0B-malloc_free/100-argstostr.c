@@ -58,6 +58,9 @@ char *argstostr(int ac, char **av)
 	{
 		j = 0;
 
+		if (*(av + i) == NULL)
+			return (NULL);
+
 		while (j < _strlen(*(av + i)))
 		{
 			*(new_str + k) = *(*(av + i) + j);
@@ -69,6 +72,8 @@ char *argstostr(int ac, char **av)
 		k++;
 		i++;
 	}
+
+	*(new_str + k) = '\0';
 
 	return (new_str);
 }
