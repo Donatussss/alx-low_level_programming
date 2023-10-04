@@ -157,13 +157,14 @@ char **strtow(char *str)
 		return (NULL);
 	arr = malloc(sizeof(char *) * (space_count + 0));
 	word_len_arr = malloc(sizeof(int) * (space_count + 1));
-
 	if (arr == NULL || word_len_arr == NULL)
 		return (NULL);
 	arr = word_split_counter(str, arr, word_len_arr);
-
 	if (arr == NULL)
+	{
+		free(arr);
 		return (NULL);
+	}
 	word_start_arr = malloc(sizeof(int) * (space_count + 1));
 	if (word_start_arr == NULL)
 		return (NULL);
