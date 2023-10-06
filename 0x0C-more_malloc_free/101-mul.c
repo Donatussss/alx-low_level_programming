@@ -2,11 +2,10 @@
 #include "main.h"
 
 /**
- * isnumber - a function that checks if a string is a number
+ * isnumber - checks if a string is a number
  * @s: pointer to string
  * Return: 1 if s is a number 0 otherwise
  */
-
 int isnumber(char *s)
 {
 	while (*s)
@@ -19,12 +18,11 @@ int isnumber(char *s)
 }
 
 /**
- * mul2 - a function multiply two numbers
+ * mul2 - multiply two numbers
  * @s1: first number
  * @s2: second number
  * Return: pointer to result
  */
-
 char *mul2(char *s1, char *s2)
 {
 	int l1, l2, sum = 0, cry = 0, *res, i,
@@ -73,7 +71,6 @@ char *mul2(char *s1, char *s2)
  * print - prints a string
  * @s: string to print
  */
-
 void print(char *s)
 {
 	int i = 0;
@@ -84,29 +81,26 @@ void print(char *s)
 }
 
 /**
- * main - a program that multiplies two positive numbers
+ * main - entry point
  * @argc: argument count
  * @argv: arguments array
  * Return: 0 success 98 error
  */
-
 int main(int argc, char **argv)
 {
-	char *temp;
+	char *res;
 
 	if (argc != 3)
 	{
 		print("Error");
 		exit(98);
 	}
-	temp = mul2(argv[1], argv[2]);
-	if (temp == NULL)
+	res = mul2(argv[1], argv[2]);
+	if (res == NULL)
 	{
 		print("Error");
 		exit(98);
 	}
-
-	print(temp);
-
+	print(res);
 	return (0);
 }
