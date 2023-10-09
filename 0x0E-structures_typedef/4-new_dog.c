@@ -32,11 +32,10 @@ int _strlen(char *s)
  * NULL if insufficient memory was available
  */
 
-char *_strdup(char *str)
+char *_strdup(char * new_str, char *str)
 {
 	int strlen;
 	int i = 0;
-	char *new_str;
 	void *temp;
 
 	if (str == NULL)
@@ -76,16 +75,16 @@ char *_strdup(char *str)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog1;
-	char *name_temp;
-	char *owner_temp;
+	char *name_temp = NULL;
+	char *owner_temp = NULL;
 
 	dog1 = malloc(sizeof(dog_t));
 
 	if (dog1 == NULL)
 		return (NULL);
 
-	name_temp = _strdup(name);
-	owner_temp = _strdup(owner);
+	name_temp = _strdup(name_temp, name);
+	owner_temp = _strdup(owner_temp, owner);
 
 	if (name_temp == NULL || owner_temp == NULL)
 		return (NULL);
