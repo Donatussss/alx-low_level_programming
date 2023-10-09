@@ -75,11 +75,11 @@ char *_strdup(char *new_str, char *str)
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *dog1;
+	struct dog *dog1;
 	char *name_temp = NULL;
 	char *owner_temp = NULL;
 
-	dog1 = malloc(sizeof(dog_t));
+	dog1 = malloc(sizeof(struct dog));
 
 	if (dog1 == NULL)
 		return (NULL);
