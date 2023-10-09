@@ -26,13 +26,14 @@ int _strlen(char *s)
  * allocated space in memory, which contains a copy of the
  * string given as a parameter
  * @str: string provided
+ * @new_str: target_str
  * Return: a pointer to a new string which is a duplicate of
  * the string str
  * NULL if str = NULL
  * NULL if insufficient memory was available
  */
 
-char *_strdup(char * new_str, char *str)
+char *_strdup(char *new_str, char *str)
 {
 	int strlen;
 	int i = 0;
