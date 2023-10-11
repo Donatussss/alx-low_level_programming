@@ -17,18 +17,18 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
+	if ((*(argv + 2))[1])
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
 	fptr = get_op_func(*(argv + 2));
 
 	if (fptr == NULL)
 	{
 		printf("Error\n");
 		exit(99);
-	}
-
-	if ((fptr == op_div || fptr == op_mod) && atoi(*(argv + 3)) == 0)
-	{
-		printf("Error\n");
-		exit(100);
 	}
 
 	printf("%d\n", fptr(atoi(*(argv + 1)), atoi(*(argv + 3))));
