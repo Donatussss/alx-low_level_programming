@@ -92,7 +92,6 @@ void print_all(const char * const format, ...)
 			{
 				(*f[j])(ap);
 				executed = 1;
-				break;
 			}
 			j++;
 		}
