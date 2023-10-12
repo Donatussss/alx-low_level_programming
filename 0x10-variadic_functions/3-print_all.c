@@ -1,6 +1,26 @@
 #include "variadic_functions.h"
 
 /**
+ * _strlen - returns length of string
+ * @s: pointer to first char in string
+ * Return: int length of string
+ */
+
+int _strlen(const char *s)
+{
+	int str_len = 0;
+	char comp = *s;
+
+	while (comp != '\0')
+	{
+		str_len++;
+		comp = *(s + str_len);
+	}
+
+	return (str_len);
+}
+
+/**
  * print_c - prints a char
  * @ap: an argument pointer variable
  */
@@ -69,7 +89,7 @@ void print_s(va_list ap)
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	int i = 0, j = 0, k = strlen(format), l = 0;
+	int i = 0, j = 0, k = _strlen(format), l = 0;
 	char original_f[] = "cifs";
 	int executed = 0;
 
