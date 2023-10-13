@@ -4,7 +4,6 @@
 * header file containing prototypes
 */
 #include <stdarg.h>
-#include <stdio.h>
 /**
  * struct printer - A new struct type defining a printer.
  * @symbol: A symbol representing a data type.
