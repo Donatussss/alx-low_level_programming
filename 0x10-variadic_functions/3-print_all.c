@@ -66,7 +66,8 @@ void print_all(const char * const format, ...)
 	char original_f[] = "cifs";
 	int executed = 0;
 
-	void (*f[])(va_list) = {print_c, print_i, print_f, print_s};
+	printer_t f[] = {{"c", print_c}, {"i", print_i}, 
+		{"f", print_f}, {"s", print_s}};
 
 	va_start(ap, format);
 
@@ -83,7 +84,7 @@ void print_all(const char * const format, ...)
 		{
 			if (*(format + i) == *(original_f + j))
 			{
-				(*f[j])(ap);
+				f[j].print(ap);
 				executed = 1;
 			}
 			j++;
