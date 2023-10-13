@@ -63,10 +63,9 @@ void print_all(const char * const format, ...)
 {
 	va_list ap;
 	int i = 0, j = 0;
-	char original_f[] = "cifs";
 	int executed = 0;
 
-	printer_t f[] = {{"c", print_c}, {"i", print_i}, 
+	printer_t f[] = {{"c", print_c}, {"i", print_i},
 		{"f", print_f}, {"s", print_s}};
 
 	va_start(ap, format);
@@ -80,9 +79,9 @@ void print_all(const char * const format, ...)
 
 		executed = 0;
 
-		while (*(original_f + j) != '\0')
+		while (j < 4)
 		{
-			if (*(format + i) == *(original_f + j))
+			if (*(format + i) == *f[j].symbol)
 			{
 				f[j].print(ap);
 				executed = 1;
