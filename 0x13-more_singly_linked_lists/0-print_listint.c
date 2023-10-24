@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_list - a function that prints all the elements of a list_t list
+ * print_listint - a function that prints all the elements of a list_t list
  * @h: head of a linked list
  * Return: the number of nodes
  * If str is NULL, print [0] (nil)
