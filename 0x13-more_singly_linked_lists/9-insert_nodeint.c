@@ -17,10 +17,10 @@ listint_t *insert_nodeint_at_index(listint_t **head,
 {
 	listint_t *temp_next, **carry, *newx;
 
-	if (*head == NULL)
+	if (*head == NULL && idx != 0)
 		return (NULL);
 
-	else if (idx == 0 && *head != NULL)
+	else if (idx == 0)
 	{
 		newx = malloc(sizeof(listint_t));
 
@@ -28,9 +28,15 @@ listint_t *insert_nodeint_at_index(listint_t **head,
 			return (NULL);
 
 		newx->n = n;
-		temp_next = (*head)->next;
-		(*head)->next = newx;
-		newx->next = temp_next;
+
+		if (*head != NULL)
+		{
+			temp_next = (*head)->next;
+			(*head)->next = newx;
+			newx->next = temp_next;
+		}
+		else
+			newx->next = NULL;
 
 		return (newx);
 	}
