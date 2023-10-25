@@ -18,7 +18,7 @@ listint_t *insert_nodeint_at_index(listint_t **head,
 	listint_t *head_copy = *head, *newx;
 	int idx_copy = idx;
 
-	while (head_copy != NULL && idx_copy > 0)
+	while (head_copy != NULL && idx_copy > 1)
 	{
 		head_copy = head_copy->next;
 		idx_copy--;
@@ -28,7 +28,7 @@ listint_t *insert_nodeint_at_index(listint_t **head,
 		return (NULL);
 
 	newx = malloc(sizeof(listint_t));
-	
+
 	if (newx == NULL)
 		return (NULL);
 
