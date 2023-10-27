@@ -28,7 +28,5 @@ unsigned int binary_count(unsigned long int n)
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int i = n ^ m;
-
-	return (binary_count(i));
+	return (binary_count(n ^ m));
 }
