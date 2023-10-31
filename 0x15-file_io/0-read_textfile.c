@@ -8,6 +8,7 @@
 /**
  * read_textfile - a function that reads a text file
  * and prints it to the POSIX standard output
+ * @filename: path to file
  * @letters: the number of letters it should read and print
  * Return: the actual number of letters it could read and print
  * if the file can not be opened or read, return 0
@@ -29,7 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	buffer = malloc(letters * sizeof(char));
-	if (buffer == NULL)
+	if (!buffer)
 		return (0);
 
 	rd = read(file_descp, buffer, letters);
