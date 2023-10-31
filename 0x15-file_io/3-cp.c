@@ -7,7 +7,7 @@
 #include <stdio.h>
 
 /**
- * check_file - checks if provided files can be opened
+ * check_files- checks if provided files can be opened
  * @file_from: file_from
  * @file_to: file_to
  * @argv: arguments vector
