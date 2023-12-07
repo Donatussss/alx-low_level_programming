@@ -4,14 +4,14 @@
 #include <stdlib.h>
 
 /**
- * createnode - a function that creates a new
+ * createnode3 - a function that creates a new
  * dlistint_t node
  * @n: value of node
  * Return: pointer to node
  * NULL if it failed
  */
 
-dlistint_t *createnode(int n)
+dlistint_t *createnode3(int n)
 {
 	dlistint_t *new;
 
@@ -39,7 +39,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 
 	if (*head == NULL)
 	{
-		*head = createnode(n);
+		*head = createnode3(n);
 		if (*head == NULL)
 			return (NULL);
 
@@ -48,7 +48,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	}
 	else if ((*head)->next == NULL)
 	{
-		new = createnode(n);
+		new = createnode3(n);
 		if (new == NULL)
 			return (NULL);
 		new->prev = *head;
