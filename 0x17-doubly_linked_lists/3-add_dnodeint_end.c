@@ -35,13 +35,26 @@ dlistint_t *createnode(int n)
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
+	dlistint_t *new;
 	if (*head == NULL)
 	{
 		*head = createnode(n);
 		if (*head == NULL)
 			return (NULL);
+
+		(*head)->next = NULL;
 		return (*head);
 	}
-
-	return (add_dnodeint_end(&((*head)->next), n));
+	else if ((*head)->next == NULL)
+	{
+		new = createnode(n);
+		if (new == NULL)
+			return (NULL);
+		new->prev = *head;
+		new->next = NULL;
+		(*head)->next = new;
+		return (new);
+	}
+	else
+		return (add_dnodeint_end(&((*head)->next), n));
 }
