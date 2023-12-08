@@ -37,7 +37,7 @@ dlistint_t *createnode7(int n)
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *current = *h, *new;
+	dlistint_t *current = *h, *new, *prev_p;
 
 	if (*h == NULL)
 		return (NULL);
@@ -56,10 +56,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		}
 		else
 		{
-			new->prev = current->prev;
+			prev_p = current->prev;
+			new->prev = prev_p;
 			new->next = current;
-			(new->prev)->next = new;
-			(new->next)->prev = new;
+			prev_p->next = new;
+			current->prev = new;
 		}
 	}
 	return (insert_dnodeint_at_index(&((*h)->next), --idx, n));
